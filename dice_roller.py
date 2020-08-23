@@ -19,7 +19,9 @@ def main():
             print(f'You rolled a {roll}')
       print(f'You have rolled a total of {dice_sum}')
       player_totals[name] = dice_sum
-  print(player_totals)
+  sorted_player_totals = sorted(player_totals.items(), key=lambda x: x[1], reverse=True)
+  print(sorted_player_totals)
+  print(f'The winner is {sorted_player_totals[0][0]}')
 
 if __name__== "__main__":
   main()
